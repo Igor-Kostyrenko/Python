@@ -34,16 +34,19 @@ while playing:
     
     if player_rect.bottom >= HEIGH:
         player_speed = [1, -1]
+        player.fill((255, 0, 128))
     
     if player_rect.top <= 0:
-        player_speed = [-2, 1]
+        player_speed = [-1, 1]
+        player.fill((255, 128, 18))
         
     if player_rect.right >= WIDTH:
         player_speed = [-1, -1]
+        player.fill((0, 55, 213))
         
     if player_rect.left <= 0:
-        player_speed = [2, 1]
-        
+        player_speed = [1, 1]
+        player.fill((140, 140, 114))
     
          
     main_display.blit(player, player_rect)
